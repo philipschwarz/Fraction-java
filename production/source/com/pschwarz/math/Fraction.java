@@ -11,7 +11,7 @@ public class Fraction
 
     public Fraction plus(Fraction that)
     {
-        return this;
+        return integerValue > 0 ? this : that;
     }
 
     public int intValue()
