@@ -5,10 +5,9 @@ public class Fraction
     private final int numerator;
     private final int denominator;
 
-    public Fraction(int integerValue)
+    public Fraction(int numerator)
     {
-        this.numerator = integerValue;
-        this.denominator = 1;
+        this(numerator, 1);
     }
 
     public Fraction(int numerator, int denominator)
