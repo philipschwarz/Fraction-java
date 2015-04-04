@@ -5,9 +5,9 @@ public class Fraction
     private final int numerator;
     private final int denominator;
 
-    public Fraction(int numerator)
+    public Fraction(int addend)
     {
-        this(numerator, 1);
+        this(addend, 1);
     }
 
     public Fraction(int numerator, int denominator)
@@ -20,15 +20,6 @@ public class Fraction
     {
         return new Fraction(this.numerator + that.numerator, denominator);
     }
-
-    public int intValue()
-    {
-        return numerator;
-    }
-
-    public int getNumerator() { return numerator; }
-
-    public int getDenominator() { return denominator; }
 
     @Override
     public String toString()
