@@ -28,7 +28,7 @@ public class AddFractionsTest
     @Test
     public void nonNegativeNonZeroOperands() throws Exception
     {
-        assertEquals(7, new Fraction(4).plus(new Fraction(3)).intValue());
+        assertEquals(new Fraction(7), new Fraction(4).plus(new Fraction(3)));
     }
 
     @Test
