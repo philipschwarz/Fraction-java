@@ -34,7 +34,7 @@ public class AddFractionsTest
     @Test
     public void negativeInputAndNegativeOutput() throws Exception
     {
-        assertEquals(-2, new Fraction(-3).plus(new Fraction(1)).intValue());
+        assertEquals(new Fraction(-2), new Fraction(-3).plus(new Fraction(1)));
     }
 
     @Test
