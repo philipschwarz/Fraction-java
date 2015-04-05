@@ -1,5 +1,7 @@
 package com.pschwarz.math;
 
+import static com.pschwarz.math.NumberTheory.gcd;
+
 public class Fraction
 {
     private final int numerator;
@@ -12,8 +14,9 @@ public class Fraction
 
     public Fraction(int numerator, int denominator)
     {
-        this.numerator = numerator;
-        this.denominator = denominator;
+        int gcd = gcd(numerator, denominator);
+        this.numerator = numerator / gcd;
+        this.denominator = denominator / gcd;
     }
 
     public Fraction plus(Fraction that)
