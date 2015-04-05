@@ -2,6 +2,7 @@ package com.pschwarz.math;
 
 import org.junit.Test;
 
+import static com.pschwarz.math.NumberTheory.*;
 import static org.junit.Assert.assertEquals;
 
 public class GreatestCommonDivisorTest
@@ -46,15 +47,11 @@ public class GreatestCommonDivisorTest
         assertEquals(4, gcd(24, 28));
     }
 
-    private int gcd(int a, int b)
+    @Test
+    public void zero() throws Exception
     {
-        if(b == 0)
-        {
-            return Math.abs(a);
-        }
-        else
-        {
-            return gcd( b, a % b);
-        }
+        assertEquals(1, gcd(1, 0));
+        assertEquals(5, gcd(0, 5));
+        assertEquals(0, gcd(0, 0));
     }
 }
